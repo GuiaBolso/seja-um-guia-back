@@ -81,7 +81,7 @@ Para tanto você deverá construir uma aplicação com:
 
 ### Como entrego?
 
-Você nos envia um e-mail para **frontmonstrao[arroba]guiabolso[ponto]com[ponto]br** contendo:
+Você nos envia um e-mail para **backmonstrao[arroba]guiabolso[ponto]com[ponto]br** contendo:
 
 - Seu **nome completo**;
 - Seu **telefone** para contato;
