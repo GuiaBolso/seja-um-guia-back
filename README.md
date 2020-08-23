@@ -21,9 +21,10 @@ Você quer trabalhar no Guiabolso? Vamos te ajudar!
 
 Para você, **back-end engineer** (que é um desenvolvedor de software e **não um codador baterod de tecla**), daremos o caminho das pedras.
 
-Temos um processo seletivo que é dividido em algumas etapas. 
+Temos um processo seletivo que é dividido em algumas etapas, que não necessariamente seguem essa ordem: 
 
 - O desafio técnico (descrito nesse repositório);
+- Um teste técnico em pair programming;
 - Uma conversa com nossa **master blaster equipe técnica**, pra fazer um fit cultural;
 - Conversa com o Time de Pessoas;
 
@@ -33,15 +34,19 @@ Estamos procurando profissionais que estejam bem familiarizados com a stack que 
 
 Pensamos em um desafio imaginando um ecossistema que ajuda a testar as nossas funcionalidades, tanto de front quanto as integrações.
 
-- Queremos _mockar_ uma API de transações
-- Queremos uma _API aberta e hospedada_ que permita uma batida HTTP
-- Queremos que essa _API aberta e hospedada_ devolva um JSON conforme um contrato específico
+- Queremos __um mock__ de uma _API_ de transações
+- Queremos uma _API_ __HTTP__
+- Queremos que essa _API_ devolva um __JSON conforme um contrato específico__
+- Queremos poder rodar essa _API_ usando [__docker__](https://www.docker.com/)
+- Esse código, __por ser um mock, não pode usar recursos externos ao código__ (Por ex.: banco hospedado, memcached, etc)
 
 #### Regras de negócio
 
 - dado um `conjunto de dados`, formado por um id de usuário, um ano e um mês, deve-se retornar uma lista de transações
 - o id de usuário é um `número inteiro` de 1.000 a 100.000.000
 - cada transação deve ter uma `descrição aleatória` no formato string
+- caso o conjunto de transações tenha duas ou mais transações com a `mesma descrição, data e valor`, todas, menos uma, `devem ter duplicated true`
+- ao iterar 12 meses em um mesmo ano, `ao menos 3 meses deve ter uma transação ignorada`
 - cada descrição deve ter no mínimo `10 caracteres`
 - cada descrição não pode superar `120 caracteres`
 - cada transação deve ter um `valor aleatório`
@@ -52,7 +57,7 @@ Pensamos em um desafio imaginando um ecossistema que ajuda a testar as nossas fu
 - cada transação deve ter uma `data aleatória` em formato `timestamp`
 - a data aleatória deve estar `dentro do range de ano e mês` dados
 - dado dois `conjunto de dados` iguais, as respostas devem ser as mesmas _(pelo menos durante o dia que estivermos brincando)_
-- utilize os status HTTP para representar os casos de excessão nas validações
+- utilize os `status HTTP` para representar os casos de excessão nas validações
 
 #### Contrato
 
@@ -66,16 +71,18 @@ Content-type: application/json
      "descricao": "string(10, 120)"
      "data": "timestamp"
      "valor": "integer(-9.999.999, 9.999.999)"
+     "duplicated": "boolean"
   }  
 ]
 ```
 
 ### Quais são os requisitos?
 
-Para tanto você deverá construir uma aplicação com:
+Para tanto, você deverá construir uma aplicação com:
 
 - Gradle;
 - Java 8+ ou Kotlin;
+- Docker
 
 **PS. lembre-se, este é um desafio de backend. O resultado, qualidade e performance também serão levados em conta. Se quiser, use um framework, mas não esqueça que a primeira impressão conta.**
 
@@ -91,24 +98,15 @@ Você nos envia um e-mail para **backmonstrao[arroba]guiabolso[ponto]com[ponto]b
 - **Onde você achou** esse repositório ("Fulaninho me indicou", "Vi no grupo X", "Tive um sonho consciente...", etc);
 
 - Seu código
-- Dockerfile para subir tudo (caso tenha banco ou outros serviços)
-- Fixtures para inicializar banco (caso necessário)
+- Dockerfile
 
 #### Com GIT
 
 Cuide do repositório que vai mandar. Crie um readme.md, dê um nome semântico, zele pelo conteúdo que vai entregar. Lembre-se, esse desafio é um resumo de como você trabalha.
 
 - URL do **repositório**;
-- URL para a **API aberta e hospedada** com uma versão **funcional** da sua aplicação;
 
 **Mas eu estou empregado e não posso deixar isso público ou não vou usar github :(**
-
-É importante ter uma versão publicada, portanto, se não se sentir confortável com o github (que é 100% público) você pode utlizar GIT com o [gitlab](https://about.gitlab.com/), [bitbucket](https://bitbucket.org/) 
-
-Para hospedar você pode usar:
-- [heroku](https://www.heroku.com/)
-- [AWS](https://aws.amazon.com/)
-- ou alguma alternativa [free for dev](https://free-for.dev/#/?id=paas)
 
 Se não quiser abrir o código fonte em um repositório, nos envie **compactado em Zip**
 
@@ -130,11 +128,12 @@ Nesse sentido, alguns pontos que devem ser observados:
 - Seu código deve compilar
 - Seu código deve subir na nossa máquina
 - As respostas devem respeitar o contrato
-- Arquitetura um combinado. Defina qual é a que você quer serguir, respeite e seja consistente.
+- Arquitetura é um combinado. Defina qual é a que você quer serguir, respeite e seja consistente.
 - Como você organiza seus arquivos, métodos, nomeia variáveis, lida com o seu código como um todo são outros pontos observados. Seja cuidadoso, utilize boas práticas e padrões.
-- Seja consistente. Se escolher um approach mais OO, siga até o final, assim como se usar Spring, use os recursos dele.
+- Seja consistente. Se escolher um approach mais _OO_, siga até o final, assim como se usar Spring, use os recursos dele.
 - Siga as boas práticas da ferramenta escolhida, bem como respeite as boas práticas de código geral (um validador de qualidade pode te ajudar).
 - Codifique como você gostaria de trabalhar.
+- Imagine que esse código pode receber mais features
 - **Leia todo o desafio, 3 vezes, até o final e escreva "BATATA" no final do seu e-mail de entrega.**
 
 ### O que provavelmente vamos olhar
@@ -148,7 +147,7 @@ Nesse sentido, alguns pontos que devem ser observados:
 - Headers retornados
 - Performance
 
-Vamos ler seu código, apreciar o resultado, olhar, testar. Invista o tempo necessário para fazer um desafio que demonstre o resumo das suas capacidades técnicas. Faça com carinho.
+Vamos ler seu código, rodar, apreciar o resultado, olhar, testar. Invista o tempo necessário para fazer um desafio que demonstre o resumo das suas capacidades técnicas. Faça com carinho.
 
 Obrigado e boa sorte!
 
