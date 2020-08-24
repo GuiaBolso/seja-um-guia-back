@@ -32,7 +32,7 @@ Temos um processo seletivo que é dividido em algumas etapas, que não necessari
 
 Estamos procurando profissionais que estejam bem familiarizados com a stack que estamos utilizando. 
 
-Pensamos em um desafio imaginando um ecossistema que ajuda a testar as nossas funcionalidades, tanto de front quanto as integrações.
+Pensamos em um desafio imaginando um ecossistema que ajude a testar as nossas funcionalidades, tanto de front quanto as integrações.
 
 - Queremos __um mock__ de uma _API_ de transações
 - Queremos uma _API_ __HTTP__
@@ -43,21 +43,24 @@ Pensamos em um desafio imaginando um ecossistema que ajuda a testar as nossas fu
 #### Regras de negócio
 
 - dado um `conjunto de dados`, formado por um id de usuário, um ano e um mês, deve-se retornar uma lista de transações
+- a lista de transações deve ter `quantidade variável entre os meses`
 - o id de usuário é um `número inteiro` de 1.000 a 100.000.000
-- cada transação deve ter uma `descrição aleatória` no formato string
+- cada transação deve ter uma `descrição aleatória legível` no formato string
+- essa `descrição aleatória legível` deve ser legível por humanos, isso significa que `YhCekEr13RH` não é válido, enquanto `chaconapotalo pocanoçale` é válido
 - caso o conjunto de transações tenha duas ou mais transações com a `mesma descrição, data e valor`, todas, menos uma, `devem ter duplicated true`
-- ao iterar 12 meses em um mesmo ano, `ao menos 3 meses deve ter uma transação ignorada`
+- ao iterar 12 meses em um mesmo ano, `no mínimo 3 meses devem ter uma transação ignorada`
 - cada descrição deve ter no mínimo `10 caracteres`
-- cada descrição não pode superar `120 caracteres`
+- cada descrição não pode superar `60 caracteres`
 - cada transação deve ter um `valor aleatório`
-- o valor da transação é um `número inteiro`
+- o valor da transação deve ser representado por um `número inteiro`
 - o valor da transação deverá ter seus `2 últimos dígitos representando os centavos`
 - um valor de `8989` representa, portanto, `R$ 89,89`
-- o valor da transação pode representar de `-9.999.999 a 9.999.999`
-- cada transação deve ter uma `data aleatória` em formato `timestamp`
+- o valor da transação deve estar entre `-9.999.999 e 9.999.999`, inclusive
+- cada transação deve ter o `timestamp de uma data aleatória` em formato `long`
 - a data aleatória deve estar `dentro do range de ano e mês` dados
 - dado dois `conjunto de dados` iguais, as respostas devem ser as mesmas _(pelo menos durante o dia que estivermos brincando)_
 - utilize os `status HTTP` para representar os casos de excessão nas validações
+- além do status, deve ser respondido o `motivo do erro`
 
 #### Contrato
 
@@ -69,7 +72,7 @@ Content-type: application/json
 [
   {
      "descricao": "string(10, 120)"
-     "data": "timestamp"
+     "data": "long(timestamp)"
      "valor": "integer(-9.999.999, 9.999.999)"
      "duplicated": "boolean"
   }  
@@ -110,6 +113,10 @@ Cuide do repositório que vai mandar. Crie um readme.md, dê um nome semântico,
 
 Se não quiser abrir o código fonte em um repositório, nos envie **compactado em Zip**
 
+#### Hospedando
+
+Caso queira, você pode hospedar uma versão aberta no Heroku ou algum serviço parecido
+
 #### Com [Repl.it](https://repl.it/)
 
 Caso queira criar e editar seu teste em qualquer lugar, você pode usar uma plataforma remota como o Repl.it.
@@ -147,11 +154,15 @@ Nesse sentido, alguns pontos que devem ser observados:
 - Headers retornados
 - Performance
 
-Vamos ler seu código, rodar, apreciar o resultado, olhar, testar. Invista o tempo necessário para fazer um desafio que demonstre o resumo das suas capacidades técnicas. Faça com carinho.
+Vamos ler seu código, rodar, apreciar o resultado, olhar, testar. 
+
+Invista o tempo necessário para fazer um desafio que demonstre o resumo das suas capacidades técnicas. Faça com carinho.
 
 Obrigado e boa sorte!
 
 ## Licença
+
+versão 24-08-2020
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/br/88x31.png" /></a><br />Este repositório, texto, códigos e forks estão licenciados com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/">Creative Commons Atribuição 3.0 Brasil</a>.
 
