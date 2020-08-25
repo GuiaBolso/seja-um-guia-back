@@ -6,20 +6,20 @@ Aqui no [Guiabolso](https://www.guiabolso.com.br) trabalhamos em times. Nosso ti
 
 Em um ambiente descontraído, prezamos pela qualidade e participação ativa dos desenvolvedores na construção da nossa plataforma. Temos um carinho especial pelo usuário, direcionando nossas decisões pela experiência e fazendo constantes ajustes para alinhar os nossos sistemas com as necessidades do mercado.
 
-Hoje trabalhamos com alguns grandes produtos:
+Hoje, trabalhamos com alguns grandes produtos:
 
 - **Controle financeiro**: uma ferramenta para gerenciamento de finanças pessoais, em um aplicativo, que se integra automaticamente com sua conta bancária (use e veja **;)**);
 - **Crédito pessoal**: canais de aquisição para crédito pessoal, com foco em ajudar o nosso usuário a sair daquela situação chata com o cartão ou o cheque especial.
-- **GuiaBolso Connect**: uma plataformade inteligência de dados que conecta pessoas e empresas com o intuito de viabilizar negócios
+- **GuiaBolso Connect**: uma plataforma de inteligência de dados que conecta pessoas e empresas com o intuito de viabilizar negócios
 
 
-No Back-end nós temos todo o ecossistema de microserviços em nuvem na AWS. Discutimos constantemente as tecnologias que usamos e como melhorar a experiência para os nossos usuários e clientes, bem como um trabalho muito próximo com a equipe de design e produto.
+No Back-end nós temos todo o ecossistema de microserviços em nuvem na AWS. Discutimos constantemente as tecnologias que usamos e como melhorar a experiência para os nossos usuários e clientes, bem como um trabalho muito próximo com a equipe de design e produto. Dê uma olhada em como está nosso [Tech-Radar](https://guiabolso.github.io/tech-radar/), atualmente.
 
 ### Gostou de tudo que está aí em cima? Então vem pra cá!!!
 
 Você quer trabalhar no Guiabolso? Vamos te ajudar!
 
-Para você, **back-end engineer** (que é um desenvolvedor de software e **não um codador baterod de tecla**), daremos o caminho das pedras.
+Para você, **back-end engineer** (que é um desenvolvedor de software e **não um codador batedor de tecla**), daremos o caminho das pedras.
 
 Temos um processo seletivo que é dividido em algumas etapas, que não necessariamente seguem essa ordem: 
 
@@ -58,7 +58,7 @@ Pensamos em um desafio imaginando um ecossistema que ajude a testar as nossas fu
 - o valor da transação deve estar entre `-9.999.999 e 9.999.999`, inclusive
 - cada transação deve ter o `timestamp de uma data aleatória` em formato `long`
 - a data aleatória deve estar `dentro do range de ano e mês` dados
-- dado dois `conjunto de dados` iguais, as respostas devem ser as mesmas _(pelo menos durante o dia que estivermos brincando)_
+- dado dois `conjuntos de dados` iguais, as respostas devem ser as mesmas _(pelo menos durante o dia que estivermos brincando)_
 - utilize os `status HTTP` para representar os casos de excessão nas validações
 - além do status, deve ser respondido o `motivo do erro`
 
@@ -162,7 +162,7 @@ Obrigado e boa sorte!
 
 ## Licença
 
-versão 24-08-2020
+versão 25-08-2020
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/br/88x31.png" /></a><br />Este repositório, texto, códigos e forks estão licenciados com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/">Creative Commons Atribuição 3.0 Brasil</a>.
 
