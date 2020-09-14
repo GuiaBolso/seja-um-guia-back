@@ -48,7 +48,7 @@ Pensamos em um desafio imaginando um ecossistema que ajude a testar as nossas fu
 - cada transação deve ter uma `descrição aleatória legível` no formato string
 - essa `descrição aleatória legível` deve ser legível por humanos, isso significa que `YhCekEr13RH` não é válido, enquanto `chaconapotalo pocanoçale` é válido
 - caso o conjunto de transações tenha duas ou mais transações com a `mesma descrição, data e valor`, todas, menos uma, `devem ter duplicated true`
-- ao iterar 12 meses em um mesmo ano, `no mínimo 3 meses devem ter uma transação ignorada`
+- ao iterar 12 meses em um mesmo ano, `no mínimo 3 meses devem ter uma transação duplicada`
 - cada descrição deve ter no mínimo `10 caracteres`
 - cada descrição não pode superar `60 caracteres`
 - cada transação deve ter um `valor aleatório`
