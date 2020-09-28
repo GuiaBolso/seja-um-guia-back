@@ -218,7 +218,7 @@ Obrigado e boa sorte!
 
 ## Licença
 
-versão 25-08-2020
+versão 28-09-2020
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/br/88x31.png" /></a><br />Este repositório, texto, códigos e forks estão licenciados com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/">Creative Commons Atribuição 3.0 Brasil</a>.
 
