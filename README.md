@@ -9,8 +9,8 @@ Em um ambiente descontraído, prezamos pela qualidade e participação ativa dos
 Hoje, trabalhamos com alguns grandes produtos:
 
 - **Controle financeiro**: uma ferramenta para gerenciamento de finanças pessoais, em um aplicativo, que se integra automaticamente com sua conta bancária (use e veja **;)**);
-- **Crédito pessoal**: canais de aquisição para crédito pessoal, com foco em ajudar o nosso usuário a sair daquela situação chata com o cartão ou o cheque especial.
-- **GuiaBolso Connect**: uma plataforma de inteligência de dados que conecta pessoas e empresas com o intuito de viabilizar negócios
+- **Crédito pessoal**: canais de aquisição para crédito pessoal, com foco em ajudar o nosso usuário a sair daquela situação chata com o cartão ou o cheque especial;
+- **GuiaBolso Connect**: uma plataforma de inteligência de dados que conecta pessoas e empresas com o intuito de viabilizar negócios.
 
 
 No Back-end nós temos todo o ecossistema de microserviços em nuvem na AWS. Discutimos constantemente as tecnologias que usamos e como melhorar a experiência para os nossos usuários e clientes, bem como um trabalho muito próximo com a equipe de design e produto. Dê uma olhada em como está nosso [Tech-Radar](https://guiabolso.github.io/tech-radar/), atualmente.
@@ -26,7 +26,7 @@ Temos um processo seletivo que é dividido em algumas etapas, que não necessari
 - O desafio técnico (descrito nesse repositório);
 - Um teste técnico em pair programming;
 - Uma conversa com nossa **master blaster equipe técnica**, pra fazer um fit cultural;
-- Conversa com o Time de Pessoas;
+- Conversa com o Time de Pessoas.
 
 ### Qual o tal desafio técnico?
 
@@ -36,11 +36,11 @@ Pensamos em um desafio imaginando um ecossistema que ajude a testar as nossas fu
 
 #### Desafio
 
-Imagina que você está construindo uma API que vai ser vir de mock para um serviço que já existe
+Imagina que você está construindo uma API que vai servir de mock para um serviço que já existe.
 
-Nós vamos testar o seu desafio apontando esse serviço que vai validar o contrato e regra de negócio
+Nós vamos testar o seu desafio apontando esse serviço que vai validar contrato e regra de negócio.
 
-Se alguma das regras não estiver respeitada, seu desafio será negado
+Se alguma das regras não estiver respeitada, seu desafio será negado.
 
 - Você vai criar uma _API_ de transações que vamos usar como __mock__
 - Essa _API_ deve ser uma _API_ __HTTP__
@@ -49,7 +49,7 @@ Se alguma das regras não estiver respeitada, seu desafio será negado
 - Não queremos ter que ter Java e/ou gradle instalado na máquina que vai rodar esse projeto
 - Queremos poder rodar essa _API_ usando [__docker__](https://www.docker.com/)
 
-Ps. Esse desafio **pode ser resolvido sem o uso de nenhuma biblioteca de terceiros**, mas o uso de bibliotecas de terceiros pode ser feito
+P.S.: esse desafio **pode ser resolvido sem o uso de nenhuma biblioteca de terceiros**, mas o uso de bibliotecas de terceiros pode ser feito.
 
 #### Regras de negócio
 
@@ -66,7 +66,7 @@ Transação:
 - a lista de transações deve ter `no mínimo uma transação por mês`
 - a lista de transações deve ter `quantidade total de transações variável entre os meses`
 - dado dois `conjuntos de dados` iguais, as respostas devem ser as mesmas
-- isso significa que, para um mesmo id, mês e ano, deve ser retornado a mesma lista
+- isso significa que, para um mesmo id, mês e ano, deve ser retornada a mesma lista
 
 Id:
 
@@ -104,7 +104,7 @@ Duplicidade:
 
 Tratamento de erro de input:
 
-- utilize os `status HTTP` para representar os casos de excessão nas validações
+- utilize os `status HTTP` para representar os casos de exceção nas validações
 - além do status, deve ser respondido o `motivo do erro`
 
 #### Contrato
@@ -134,7 +134,7 @@ Para tanto, você deverá construir uma aplicação com:
 - Java 8+ ou Kotlin (pois é nossa stack principal)
 - Docker (pois usamos containers no GB e também não rola ter que configurar JVM pra cada teste que a gente receber)
 
-**PS. lembre-se, este é um desafio de backend. O resultado, qualidade e performance também serão levados em conta. Se quiser, use um framework, mas não esqueça que a primeira impressão conta.**
+**P.S.: lembre-se, este é um desafio de backend. O resultado, qualidade e performance também serão levados em conta. Se quiser, use um framework, mas não esqueça que a primeira impressão conta.**
 
 ### Como entrego?
 
@@ -148,18 +148,18 @@ Você nos envia um e-mail para **backmonstrao[arroba]guiabolso[ponto]com[ponto]b
 - **Onde você achou** esse repositório ("Fulaninho me indicou", "Vi no grupo X", "Tive um sonho consciente...", etc);
 
 - Seu código ou URL do **repositório**;
-- URL do seu sistema rodando (caso tenha hospedado no heroku, por ex)
+- URL do seu sistema rodando (caso tenha hospedado no heroku, por ex).
 
 #### Usando um VCS online (Git, Mercurial, SVN...)
 
 Cuide do repositório que vai mandar. Crie um readme.md, dê um nome semântico, zele pelo conteúdo que vai entregar. Lembre-se, esse desafio é __um resumo de como você trabalha__.
 
-Você pode usar o github, o bitbucket, o gitlab ou qualquer alternativa do gênero
+Você pode usar o github, o bitbucket, o gitlab ou qualquer alternativa do gênero.
 
 
 **Mas eu estou empregado e não posso deixar isso público ou não vou usar github :(**
 
-Se não quiser abrir o código fonte em um repositório, nos envie **compactado em Zip**
+Se não quiser abrir o código fonte em um repositório, nos envie **compactado em Zip**.
 
 
 #### Hospedando
@@ -181,17 +181,17 @@ Veja, esse teste, além de um desafio, é uma forma de explorar e expressar sua 
 
 Nesse sentido, alguns pontos que devem ser observados:
 
-- Seu código deve _compilar_
-- Seu código deve _subir na nossa máquina usando Docker_
-- As respostas devem _respeitar o contrato_ 
-- Seu código deve _passar no nosso validador_
+- Seu código deve _compilar_.
+- Seu código deve _subir na nossa máquina usando Docker_.
+- As respostas devem _respeitar o contrato_.
+- Seu código deve _passar no nosso validador_.
 - Arquitetura é um combinado. Defina qual é a que você quer serguir, _respeite a arquitetura escolhida e seja consistente_.
 - Como você organiza seus arquivos, métodos, nomeia variáveis, lida com o seu código como um todo são outros pontos observados. _Seja cuidadoso, utilize boas práticas e padrões_.
 - _Seja consistente_. Se escolher um approach mais _OO_, siga até o final, assim como se usar Spring, use os recursos dele.
 - _Siga as boas práticas da ferramenta escolhida_, bem como respeite as boas práticas de código geral (um validador de qualidade pode te ajudar).
 - _Codifique como você gostaria de trabalhar_.
-- Imagine que esse código pode receber mais features, então não faça uma bagunça só para entregar
-- **Leia todo o desafio, 3 vezes, até o final e escreva "BATATA" no final do seu e-mail de entrega. E sim, isso é uma instrução idiota mas garante que você leu tudo até aqui**
+- Imagine que esse código pode receber mais features, então não faça uma bagunça só para entregar.
+- **Leia todo o desafio, 3 vezes, até o final e escreva "BATATA" no final do seu e-mail de entrega. E sim, isso é uma instrução idiota mas garante que você leu tudo até aqui**.
 
 ### O que provavelmente vamos olhar
 
@@ -212,7 +212,7 @@ Invista o tempo necessário para fazer um desafio que demonstre o resumo das sua
 - Se não consegue fazer algo, explique no e-mail
 - Se precisa de mais tempo, peça
 
-Muito provavelmente não vamos olhar seu currículo, nem vamos usar seu linkedin como critério de aprovação nessa etapa. Queremo seu código bem feito e funcionando!
+Muito provavelmente não vamos olhar seu currículo, nem vamos usar seu LinkedIn como critério de aprovação nessa etapa. Queremo seu código bem feito e funcionando!
 
 Obrigado e boa sorte!
 
