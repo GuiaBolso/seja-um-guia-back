@@ -47,7 +47,7 @@ Se alguma das regras não estiver respeitada, seu desafio será negado.
 - Queremos que essa _API_ devolva um __JSON conforme um contrato específico__
 - Esse código, __por ser um mock, não pode usar recursos externos ao código__ (Por ex.: banco de dados em memória, banco hospedado, memcached, etc)
 
-O desafio **deve ser resolvido sem o uso de nenhuma biblioteca de terceiros**. (com excessão do server neh?!)
+O desafio **deve ser resolvido sem o uso de nenhuma biblioteca de terceiros** (com exceção do server neh?!)
 
 #### Regras de negócio
 
@@ -61,7 +61,7 @@ Transação:
 
 - dado um `conjunto de dados`, deve ser retornada uma lista de transações
 - cada _transação_ deve seguir o [contrato de transação](#Contrato)
-- a lista de transações deve ter `um total de transacções igual ao mês, multiplicado pelo primeiro dígito do id`. Ex.: id `2995`, mês `7`, `2 * 7 = 14 transações na lista`
+- a lista de transações deve ter `um total de transações igual ao mês, multiplicado pelo primeiro dígito do id`. Ex.: id `2995`, mês `7`, `2 * 7 = 14 transações na lista`
 - dado dois `conjuntos de dados` iguais, as respostas devem ser as mesmas
 - isso significa que, para um mesmo id, mês e ano, deve ser retornada a mesma lista
 
@@ -72,7 +72,7 @@ Id:
 Descrição:
 
 - cada transação deve ter `descrição aleatória legível`
-- vocês deve criar a lógica para gerar essa `descrição aleatória legível`
+- vocês devem criar a lógica para gerar essa `descrição aleatória legível`
 - a descrição deve ter o tipo `string`
 - essa `descrição aleatória legível` deve ser legível por humanos, isso significa que `YhCekEr13RH` não é válido, enquanto `chaconapotalo pocanoçale` é válido
 - cada descrição deve ter no mínimo `10 caracteres`
@@ -155,9 +155,9 @@ Veja, esse teste, além de um desafio, é uma forma de explorar e expressar sua 
 
 Nesse sentido, alguns pontos que devem ser observados:
 
-- Seu código deve _compilar_ e __rodar__
-- As respostas devem _respeitar o contrato_ 
-- Seu código deve _passar no nosso validador_
+- Seu código deve _compilar_ e __rodar__.
+- As respostas devem _respeitar o contrato_.
+- Seu código deve _passar no nosso validador_.
 - Arquitetura é um combinado. Defina qual é a que você quer serguir, _respeite a arquitetura escolhida e seja consistente_.
 - Como você organiza seus arquivos, métodos, nomeia variáveis, lida com o seu código como um todo são outros pontos observados. _Seja cuidadoso, utilize boas práticas e padrões_.
 - _Seja consistente_. Se escolher um approach mais _OO_, siga até o final, assim como se usar Spring, use os recursos dele.
