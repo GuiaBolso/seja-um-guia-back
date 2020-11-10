@@ -45,11 +45,9 @@ Se alguma das regras não estiver respeitada, seu desafio será negado.
 - Você vai criar uma _API_ de transações que vamos usar como __mock__
 - Essa _API_ deve ser uma _API_ __HTTP__
 - Queremos que essa _API_ devolva um __JSON conforme um contrato específico__
-- Esse código, __por ser um mock, não pode usar recursos externos ao código__ (Por ex.: banco hospedado, memcached, etc)
-- Não queremos ter que ter Java e/ou gradle instalado na máquina que vai rodar esse projeto
-- Queremos poder rodar essa _API_ usando [__docker__](https://www.docker.com/)
+- Esse código, __por ser um mock, não pode usar recursos externos ao código__ (Por ex.: banco de dados em memória, banco hospedado, memcached, etc)
 
-P.S.: esse desafio **pode ser resolvido sem o uso de nenhuma biblioteca de terceiros**, mas o uso de bibliotecas de terceiros pode ser feito.
+O desafio **deve ser resolvido sem o uso de nenhuma biblioteca de terceiros** (com exceção do server neh?!)
 
 #### Regras de negócio
 
@@ -63,18 +61,18 @@ Transação:
 
 - dado um `conjunto de dados`, deve ser retornada uma lista de transações
 - cada _transação_ deve seguir o [contrato de transação](#Contrato)
-- a lista de transações deve ter `no mínimo uma transação por mês`
-- a lista de transações deve ter `quantidade total de transações variável entre os meses`
+- a lista de transações deve ter `um total de transações igual ao mês, multiplicado pelo primeiro dígito do id`. Ex.: id `2995`, mês `7`, `2 * 7 = 14 transações na lista`
 - dado dois `conjuntos de dados` iguais, as respostas devem ser as mesmas
 - isso significa que, para um mesmo id, mês e ano, deve ser retornada a mesma lista
 
 Id:
 
-- o id de usuário é um `número inteiro` de 1.000 a 100.000.000
+- o id de usuário é um `número inteiro` de `1.000 a 100.000`
 
 Descrição:
 
 - cada transação deve ter `descrição aleatória legível`
+- vocês devem criar a lógica para gerar essa `descrição aleatória legível`
 - a descrição deve ter o tipo `string`
 - essa `descrição aleatória legível` deve ser legível por humanos, isso significa que `YhCekEr13RH` não é válido, enquanto `chaconapotalo pocanoçale` é válido
 - cada descrição deve ter no mínimo `10 caracteres`
@@ -82,25 +80,16 @@ Descrição:
 
 Valor:
 
-- cada transação deve ter um `valor aleatório`
-- o valor da transação deve ser representado por um `número inteiro`
+- cada transação deve ter um `valor baseado no id do usuário, no índice da transação e no mês`
+- o valor da transação deve ser representado por um `número inteiro` (reais sem centavos)
 - o valor da transação deve estar entre `-9.999.999 e 9.999.999`, inclusive
-- o valor da transação deverá ter seus `2 últimos dígitos representando os centavos`
-- um valor de `8989` representa, portanto, `R$ 89,89`
-
-Ex.: Imagine que uma transação representa uma compra na "Banca de jornal Vila Luluzinha" de R$ 19,59. Neste caso, o valor do campo transação deve ser `"valor": 1959`
 
 Data:
 
 - cada transação deve ter uma `data aleatória` 
-- o campo data deve ser um `timestamp` 
+- o campo data deve ter o formato `timestamp` 
 - o campo data deve ter o tipo `long`
 - a data aleatória deve estar `dentro do range de ano e mês` dados
-
-Duplicidade:
-
-- caso o conjunto de transações tenha duas ou mais transações com a `mesma descrição, data e valor`, todas, menos uma, `devem ter o campo duplicated com valor true`
-- ao iterar 12 meses em um mesmo ano, `no mínimo 3 meses devem ter uma transação duplicada`
 
 Tratamento de erro de input:
 
@@ -121,7 +110,6 @@ Content-type: application/json
      "descricao": "string(10, 120)"
      "data": "long(timestamp)"
      "valor": "integer(-9.999.999, 9.999.999)"
-     "duplicated": "boolean"
   }  
 ]
 ```
@@ -132,7 +120,6 @@ Para tanto, você deverá construir uma aplicação com:
 
 - Gradle (pois usamos aqui e configurar o gradle é um passo importante no dia a dia)
 - Java 8+ ou Kotlin (pois é nossa stack principal)
-- Docker (pois usamos containers no GB e também não rola ter que configurar JVM pra cada teste que a gente receber)
 
 **P.S.: lembre-se, este é um desafio de backend. O resultado, qualidade e performance também serão levados em conta. Se quiser, use um framework, mas não esqueça que a primeira impressão conta.**
 
@@ -148,7 +135,8 @@ Você nos envia um e-mail para **backmonstrao[arroba]guiabolso[ponto]com[ponto]b
 - **Onde você achou** esse repositório ("Fulaninho me indicou", "Vi no grupo X", "Tive um sonho consciente...", etc);
 
 - Seu código ou URL do **repositório**;
-- URL do seu sistema rodando (caso tenha hospedado no heroku, por ex).
+- URL do seu sistema rodando (caso tenha hospedado no heroku, por ex) **opcional**
+
 
 #### Usando um VCS online (Git, Mercurial, SVN...)
 
@@ -156,24 +144,10 @@ Cuide do repositório que vai mandar. Crie um readme.md, dê um nome semântico,
 
 Você pode usar o github, o bitbucket, o gitlab ou qualquer alternativa do gênero.
 
-
 **Mas eu estou empregado e não posso deixar isso público ou não vou usar github :(**
 
 Se não quiser abrir o código fonte em um repositório, nos envie **compactado em Zip**.
 
-
-#### Hospedando
-
-Caso queira, você pode hospedar uma versão aberta no Heroku ou algum serviço parecido
-
-#### Com [Repl.it](https://repl.it/)
-
-Caso queira criar e editar seu teste em qualquer lugar, você pode usar uma plataforma remota como o Repl.it.
-
-- Sugestão: Entre com o seu GitHub
-- Crie uma aplicação da linguagem escolhida
-- Faça seu código ou importe
-- Envie a URL do seu repl para nós.
 
 ### Pontos de avaliação
 
@@ -181,8 +155,7 @@ Veja, esse teste, além de um desafio, é uma forma de explorar e expressar sua 
 
 Nesse sentido, alguns pontos que devem ser observados:
 
-- Seu código deve _compilar_.
-- Seu código deve _subir na nossa máquina usando Docker_.
+- Seu código deve _compilar_ e __rodar__.
 - As respostas devem _respeitar o contrato_.
 - Seu código deve _passar no nosso validador_.
 - Arquitetura é um combinado. Defina qual é a que você quer serguir, _respeite a arquitetura escolhida e seja consistente_.
