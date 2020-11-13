@@ -185,13 +185,13 @@ Invista o tempo necessário para fazer um desafio que demonstre o resumo das sua
 - Se não consegue fazer algo, explique no e-mail
 - Se precisa de mais tempo, peça
 
-Muito provavelmente não vamos olhar seu currículo, nem vamos usar seu LinkedIn como critério de aprovação nessa etapa. Queremo seu código bem feito e funcionando!
+Muito provavelmente não vamos olhar seu currículo, nem vamos usar seu LinkedIn como critério de aprovação nessa etapa. Queremos seu código bem feito e funcionando!
 
 Obrigado e boa sorte!
 
 ## Licença
 
-versão 28-09-2020
+versão 13-11-2020
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/br/88x31.png" /></a><br />Este repositório, texto, códigos e forks estão licenciados com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/">Creative Commons Atribuição 3.0 Brasil</a>.
 
