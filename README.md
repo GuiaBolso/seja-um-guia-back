@@ -4,29 +4,29 @@
 
 Aqui no [Guiabolso](https://www.guiabolso.com.br) trabalhamos em times. Nosso time é multidisciplinar, com foco no produto e na evolução tecnológica dos nossos sistemas. 
 
-Em um ambiente descontraído, prezamos pela qualidade e participação ativa dos desenvolvedores na construção da nossa plataforma. Temos um carinho especial pelo usuário, direcionando nossas decisões pela experiência e fazendo constantes ajustes para alinhar os nossos sistemas com as necessidades do mercado.
+Nosso ambiente é descontraído, prezamos pela qualidade e participação ativa dos desenvolvedores na construção da nossa plataforma. Temos um carinho especial pelo usuário, direcionando nossas decisões pela experiência e fazendo constantes ajustes para alinhar os nossos sistemas com as necessidades do mercado.
 
 Hoje, trabalhamos com alguns grandes produtos:
 
+- **Produtos financeiros**: canais de aquisição para produtos como cédito pessoal, cartão de crédito, investimento, seguro, previdência, etc
 - **Controle financeiro**: uma ferramenta para gerenciamento de finanças pessoais, em um aplicativo, que se integra automaticamente com sua conta bancária (use e veja **;)**);
-- **Crédito pessoal**: canais de aquisição para crédito pessoal, com foco em ajudar o nosso usuário a sair daquela situação chata com o cartão ou o cheque especial;
+- **Transações**: transferir e receber dinheiro 24hs
 - **GuiaBolso Connect**: uma plataforma de inteligência de dados que conecta pessoas e empresas com o intuito de viabilizar negócios.
 
-
-No Back-end nós temos todo o ecossistema de microserviços em nuvem na AWS. Discutimos constantemente as tecnologias que usamos e como melhorar a experiência para os nossos usuários e clientes, bem como um trabalho muito próximo com a equipe de design e produto. Dê uma olhada em como está nosso [Tech-Radar](https://guiabolso.github.io/tech-radar/), atualmente.
+No Back-end nós temos todo o ecossistema de microserviços em nuvem, na AWS. Discutimos constantemente as tecnologias que usamos e como melhorar a experiência para os nossos usuários e clientes, bem como um trabalho muito próximo com a equipe de design e produto. E pra saber mais sobre a tecnologia que usamos aqui, dê uma olhada no nosso [Tech-Radar](https://guiabolso.github.io/tech-radar/).
 
 ### Gostou de tudo que está aí em cima? Então vem pra cá!!!
 
-Você quer trabalhar no Guiabolso? Vamos te ajudar!
+Curtiu e quer fazer parte? Então bora fazer o desafio =)
 
-Para você, **back-end engineer** (que é um desenvolvedor de software e **não um codador batedor de tecla**), daremos o caminho das pedras.
+Para você, **back-end engineer**, daremos o caminho das pedras. (Você pode achar outros desafios para outras áreas no [nosso github](https://github.com/GuiaBolso)
 
 Temos um processo seletivo que é dividido em algumas etapas, que não necessariamente seguem essa ordem: 
 
 - O desafio técnico (descrito nesse repositório);
 - Um teste técnico em pair programming;
-- Uma conversa com nossa **master blaster equipe técnica**, pra fazer um fit cultural;
-- Conversa com o Time de Pessoas.
+- Uma conversa com a nossa **equipe técnica linda**, pra fazer um fit cultural;
+- Conversa com o **super topper time de Pessoas**.
 
 ### Qual o tal desafio técnico?
 
@@ -38,16 +38,16 @@ Pensamos em um desafio imaginando um ecossistema que ajude a testar as nossas fu
 
 Imagina que você está construindo uma API que vai servir de mock para um serviço que já existe.
 
-Nós vamos testar o seu desafio apontando esse serviço que vai validar contrato e regra de negócio.
+Nós vamos testar o seu desafio, apontando pra esse serviço um script que vai validar contrato e regra de negócio.
 
-Se alguma das regras não estiver respeitada, seu desafio será negado.
+Se alguma das regras não estiver respeitada, seu desafio será negado =/.
 
 - Você vai criar uma _API_ de transações que vamos usar como __mock__
 - Essa _API_ deve ser uma _API_ __HTTP__
 - Queremos que essa _API_ devolva um __JSON conforme um contrato específico__
 - Esse código, __por ser um mock, não pode usar recursos externos ao código__ (Por ex.: banco de dados em memória, banco hospedado, memcached, etc)
 
-O desafio **deve ser resolvido sem o uso de nenhuma biblioteca de terceiros** (com exceção do server neh?!)
+O desafio **deve ser resolvido sem o uso de nenhuma biblioteca de terceiros** (com exceção do server)
 
 #### Regras de negócio
 
@@ -140,7 +140,7 @@ Você nos envia um e-mail para **backmonstrao[arroba]guiabolso[ponto]com[ponto]b
 
 #### Usando um VCS online (Git, Mercurial, SVN...)
 
-Cuide do repositório que vai mandar. Crie um readme.md, dê um nome semântico, zele pelo conteúdo que vai entregar. Lembre-se, esse desafio é __um resumo de como você trabalha__.
+Cuide do repositório que vai mandar. Crie um __readme.md__, dê um nome semântico, zele pelo conteúdo que vai entregar. Lembre-se, esse desafio é __um resumo de como você trabalha__.
 
 Você pode usar o github, o bitbucket, o gitlab ou qualquer alternativa do gênero.
 
@@ -151,7 +151,9 @@ Se não quiser abrir o código fonte em um repositório, nos envie **compactado 
 
 ### Pontos de avaliação
 
-Veja, esse teste, além de um desafio, é uma forma de explorar e expressar sua desenvoltura com a plataforma backend. O foco da avaliação é a sua familiaridade com o desenvolvimenteo, lógica e boas práticas, lembrando que há um caráter seletivo. 
+Veja, esse teste, além de um desafio, é uma forma de explorar e expressar sua desenvoltura com a plataforma. 
+
+O foco da avaliação é a resolução do problema, sua familiaridade com o desenvolvimento, lógica e boas práticas, lembrando que há um caráter seletivo. 
 
 Nesse sentido, alguns pontos que devem ser observados:
 
@@ -161,10 +163,10 @@ Nesse sentido, alguns pontos que devem ser observados:
 - Arquitetura é um combinado. Defina qual é a que você quer serguir, _respeite a arquitetura escolhida e seja consistente_.
 - Como você organiza seus arquivos, métodos, nomeia variáveis, lida com o seu código como um todo são outros pontos observados. _Seja cuidadoso, utilize boas práticas e padrões_.
 - _Seja consistente_. Se escolher um approach mais _OO_, siga até o final, assim como se usar Spring, use os recursos dele.
-- _Siga as boas práticas da ferramenta escolhida_, bem como respeite as boas práticas de código geral (um validador de qualidade pode te ajudar).
+- _Siga as boas práticas da ferramenta escolhida_, bem como respeite as boas práticas de código geral (um analisador estático pode te ajudar).
 - _Codifique como você gostaria de trabalhar_.
-- Imagine que esse código pode receber mais features, então não faça uma bagunça só para entregar.
-- **Leia todo o desafio, 3 vezes, até o final e escreva "BATATA" no final do seu e-mail de entrega. E sim, isso é uma instrução idiota mas garante que você leu tudo até aqui**.
+- Imagine que esse código pode receber mais features, então tome cuidado com bagunças só pela entrega.
+- **Leia todo o desafio, 3 vezes, até o final e escreva "BATATA" no final do seu e-mail de entrega. Queremos garantir que você conteve a ansiedade e está aproveitando a experiência**.
 
 ### O que provavelmente vamos olhar
 
@@ -181,11 +183,14 @@ Vamos ler seu código, rodar, rodar nosso validador, apreciar o resultado, olhar
 
 Invista o tempo necessário para fazer um desafio que demonstre o resumo das suas capacidades técnicas. Faça com carinho.
 
-- Se não entendeu algo, pergunte
-- Se não consegue fazer algo, explique no e-mail
-- Se precisa de mais tempo, peça
+Lembrando que estamos super a disposição então:
 
-Muito provavelmente não vamos olhar seu currículo, nem vamos usar seu LinkedIn como critério de aprovação nessa etapa. Queremos seu código bem feito e funcionando!
+- Se não entender qualquer ponto do desafio, pode perguntar
+- Se não conseguir fazer algo, pode perguntar e vamos te ajudar
+- Se o tempo não for o suficiente, pode nos informar (não estamos avaliando tempo)
+- Se no meio do caminho acontecer qualquer coisa (acabou a luz, deu ruim na maquina, etc) é só nos avisar
+
+Não se preocupe currículo e linkedin nessa etapa, não vamos olhar para isso pois acreditamos que seu valor está na resolução do problema, familiaridade com o desenvolvimento, lógica e boas práticas.
 
 Obrigado e boa sorte!
 
