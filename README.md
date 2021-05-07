@@ -63,7 +63,7 @@ Transação:
 - cada _transação_ deve seguir o [contrato de transação](#Contrato)
 - a lista de transações deve ter `um total de transações igual ao mês, multiplicado pelo primeiro dígito do id`. Ex.: id `2995`, mês `7`, `2 * 7 = 14 transações na lista`
 - dado dois `conjuntos de dados` iguais, as respostas devem ser as mesmas
-- isso significa que, para um mesmo id, mês e ano, deve ser retornada a mesma lista
+- isso significa que, **para um mesmo id, mês e ano, deve ser retornada a mesma lista**
 
 Id:
 
@@ -107,7 +107,7 @@ Content-type: application/json
 
 [
   {
-     "descricao": "string(10, 120)"
+     "descricao": "string(10, 60)"
      "data": "long(timestamp)"
      "valor": "integer(-9.999.999, 9.999.999)"
   }  
